@@ -15,6 +15,9 @@
 		1E3913AB26AE29DD006ED543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E3913A926AE29DD006ED543 /* LaunchScreen.storyboard */; };
 		1E3913B626AE29DD006ED543 /* Movies_App_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913B526AE29DD006ED543 /* Movies_App_iOSTests.swift */; };
 		1E3913C126AE29DE006ED543 /* Movies_App_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913C026AE29DE006ED543 /* Movies_App_iOSUITests.swift */; };
+		1E3913D126AE2ABF006ED543 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913D026AE2ABF006ED543 /* ServerManager.swift */; };
+		1E3913D326AE2AEB006ED543 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913D226AE2AEB006ED543 /* ResourceManager.swift */; };
+		1E3913D526AE2B0F006ED543 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913D426AE2B0F006ED543 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1E3913BC26AE29DE006ED543 /* Movies-App-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movies-App-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3913C026AE29DE006ED543 /* Movies_App_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies_App_iOSUITests.swift; sourceTree = "<group>"; };
 		1E3913C226AE29DE006ED543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E3913D026AE2ABF006ED543 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		1E3913D226AE2AEB006ED543 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
+		1E3913D426AE2B0F006ED543 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		1E39139D26AE29DA006ED543 /* Movies-App-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1E3913CE26AE2A6C006ED543 /* Helper */,
 				1E39139E26AE29DA006ED543 /* AppDelegate.swift */,
 				1E3913A026AE29DA006ED543 /* SceneDelegate.swift */,
 				1E3913A226AE29DA006ED543 /* ViewController.swift */,
@@ -126,6 +133,32 @@
 				1E3913C226AE29DE006ED543 /* Info.plist */,
 			);
 			path = "Movies-App-iOSUITests";
+			sourceTree = "<group>";
+		};
+		1E3913CE26AE2A6C006ED543 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1E3913CF26AE2A75006ED543 /* Network */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1E3913CF26AE2A75006ED543 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1E3913D626AE2B38006ED543 /* Resources */,
+				1E3913D026AE2ABF006ED543 /* ServerManager.swift */,
+				1E3913D426AE2B0F006ED543 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1E3913D626AE2B38006ED543 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E3913D226AE2AEB006ED543 /* ResourceManager.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3913D126AE2ABF006ED543 /* ServerManager.swift in Sources */,
 				1E3913A326AE29DA006ED543 /* ViewController.swift in Sources */,
 				1E39139F26AE29DA006ED543 /* AppDelegate.swift in Sources */,
+				1E3913D526AE2B0F006ED543 /* NetworkError.swift in Sources */,
 				1E3913A126AE29DA006ED543 /* SceneDelegate.swift in Sources */,
+				1E3913D326AE2AEB006ED543 /* ResourceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9MRWB6593;
 				INFOPLIST_FILE = "Movies-App-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hudaelhady.Movies-App-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9MRWB6593;
 				INFOPLIST_FILE = "Movies-App-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hudaelhady.Movies-App-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
