@@ -21,6 +21,7 @@
 		1E3913D826AE2E65006ED543 /* MoviesListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913D726AE2E65006ED543 /* MoviesListResource.swift */; };
 		1E3913DA26AE2F42006ED543 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913D926AE2F42006ED543 /* NetworkConstants.swift */; };
 		1E3913DD26AE3373006ED543 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913DC26AE3373006ED543 /* MoviesList.swift */; };
+		1E3913E026AE3654006ED543 /* MoviesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3913DF26AE3654006ED543 /* MoviesRepo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1E3913D726AE2E65006ED543 /* MoviesListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListResource.swift; sourceTree = "<group>"; };
 		1E3913D926AE2F42006ED543 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		1E3913DC26AE3373006ED543 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
+		1E3913DF26AE3654006ED543 /* MoviesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		1E39139D26AE29DA006ED543 /* Movies-App-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1E3913DE26AE3627006ED543 /* Repos */,
 				1E3913DB26AE333D006ED543 /* Models */,
 				1E3913CE26AE2A6C006ED543 /* Helper */,
 				1E39139E26AE29DA006ED543 /* AppDelegate.swift */,
@@ -176,6 +179,14 @@
 				1E3913DC26AE3373006ED543 /* MoviesList.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1E3913DE26AE3627006ED543 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				1E3913DF26AE3654006ED543 /* MoviesRepo.swift */,
+			);
+			path = Repos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			files = (
 				1E3913DA26AE2F42006ED543 /* NetworkConstants.swift in Sources */,
 				1E3913D126AE2ABF006ED543 /* ServerManager.swift in Sources */,
+				1E3913E026AE3654006ED543 /* MoviesRepo.swift in Sources */,
 				1E3913A326AE29DA006ED543 /* ViewController.swift in Sources */,
 				1E3913D826AE2E65006ED543 /* MoviesListResource.swift in Sources */,
 				1E39139F26AE29DA006ED543 /* AppDelegate.swift in Sources */,
