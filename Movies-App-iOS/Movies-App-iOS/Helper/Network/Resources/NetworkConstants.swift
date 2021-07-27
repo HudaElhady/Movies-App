@@ -13,6 +13,7 @@ struct NetworkConstants {
     
     struct Api {
         static let moviesList = "movie/now_playing"
+        static let movieDetails = "movie/"
     }
     
 }
