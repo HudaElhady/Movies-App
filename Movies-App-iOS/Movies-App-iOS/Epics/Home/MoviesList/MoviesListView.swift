@@ -42,6 +42,10 @@ extension MoviesListView: UITableViewDataSource {
         }
         return cell
     }
-    
-    
+}
+
+extension MoviesListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.openMovieDetails(at: indexPath.row)
+    }
 }

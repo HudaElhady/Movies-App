@@ -34,6 +34,11 @@
 		1E3BAE6E26AF95E000AD8E45 /* MovieDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BAE6D26AF95E000AD8E45 /* MovieDetailsRepo.swift */; };
 		1E3BAE7026AF972400AD8E45 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BAE6F26AF972400AD8E45 /* MovieDetails.swift */; };
 		1E3BAE7226AF9A4E00AD8E45 /* MovieDetailsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BAE7126AF9A4E00AD8E45 /* MovieDetailsResource.swift */; };
+		1E44C36226AFFBF1001FA5F3 /* MovieDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44C36126AFFBF1001FA5F3 /* MovieDetailsPresenter.swift */; };
+		1E44C36426AFFC31001FA5F3 /* MovieDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44C36326AFFC31001FA5F3 /* MovieDetailsProtocols.swift */; };
+		1E44C36626AFFE1B001FA5F3 /* MovieDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44C36526AFFE1B001FA5F3 /* MovieDetailsInteractor.swift */; };
+		1E73B6CE26B03E5E00B11485 /* MovieDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73B6CD26B03E5E00B11485 /* MovieDetailsRouter.swift */; };
+		1E73B6D126B03ED700B11485 /* ViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73B6D026B03ED700B11485 /* ViewController+extension.swift */; };
 		C6CB5FD1DBD42E967C61EE37 /* Pods_Movies_App_iOS_Movies_App_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA42D51B987386F007AECF /* Pods_Movies_App_iOS_Movies_App_iOSUITests.framework */; };
 		C7128F0B9E430BF58F51B1F0 /* Pods_Movies_App_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C5D19C430487B66B469B7B /* Pods_Movies_App_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +93,11 @@
 		1E3BAE6D26AF95E000AD8E45 /* MovieDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDetailsRepo.swift; path = ../../../../../../MovieDetailsRepo.swift; sourceTree = "<group>"; };
 		1E3BAE6F26AF972400AD8E45 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		1E3BAE7126AF9A4E00AD8E45 /* MovieDetailsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsResource.swift; sourceTree = "<group>"; };
+		1E44C36126AFFBF1001FA5F3 /* MovieDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsPresenter.swift; sourceTree = "<group>"; };
+		1E44C36326AFFC31001FA5F3 /* MovieDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsProtocols.swift; sourceTree = "<group>"; };
+		1E44C36526AFFE1B001FA5F3 /* MovieDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsInteractor.swift; sourceTree = "<group>"; };
+		1E73B6CD26B03E5E00B11485 /* MovieDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsRouter.swift; sourceTree = "<group>"; };
+		1E73B6D026B03ED700B11485 /* ViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+extension.swift"; sourceTree = "<group>"; };
 		48FFE6EB0DFF4608C9E519FA /* Pods-Movies-App-iOS-Movies-App-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-App-iOS-Movies-App-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Movies-App-iOS-Movies-App-iOSUITests/Pods-Movies-App-iOS-Movies-App-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		49E473062139286EEAA497EB /* Pods-Movies-App-iOS-Movies-App-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-App-iOS-Movies-App-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Movies-App-iOS-Movies-App-iOSUITests/Pods-Movies-App-iOS-Movies-App-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CCB9E4636BE0A4C06E73C0A /* Pods-Movies-App-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies-App-iOS.release.xcconfig"; path = "Target Support Files/Pods-Movies-App-iOS/Pods-Movies-App-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +207,7 @@
 		1E3913CE26AE2A6C006ED543 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1E73B6CF26B03EAC00B11485 /* Extensions */,
 				1E3913CF26AE2A75006ED543 /* Network */,
 				1E3BAE6826AF7C1900AD8E45 /* StoryBoardsIDs.swift */,
 			);
@@ -293,8 +304,20 @@
 			isa = PBXGroup;
 			children = (
 				1E3BAE6B26AF8E8B00AD8E45 /* MovieDetailsView.swift */,
+				1E44C36126AFFBF1001FA5F3 /* MovieDetailsPresenter.swift */,
+				1E44C36526AFFE1B001FA5F3 /* MovieDetailsInteractor.swift */,
+				1E44C36326AFFC31001FA5F3 /* MovieDetailsProtocols.swift */,
+				1E73B6CD26B03E5E00B11485 /* MovieDetailsRouter.swift */,
 			);
 			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		1E73B6CF26B03EAC00B11485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E73B6D026B03ED700B11485 /* ViewController+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2F1D8B8BDE3BB13D7299087B /* Pods */ = {
@@ -548,11 +571,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E44C36626AFFE1B001FA5F3 /* MovieDetailsInteractor.swift in Sources */,
 				1E3913DA26AE2F42006ED543 /* NetworkConstants.swift in Sources */,
 				1E3BAE6726AF71B500AD8E45 /* MoviesListRouter.swift in Sources */,
 				1E3913D126AE2ABF006ED543 /* ServerManager.swift in Sources */,
 				1E3BAE7026AF972400AD8E45 /* MovieDetails.swift in Sources */,
 				1E3913E026AE3654006ED543 /* MoviesRepo.swift in Sources */,
+				1E73B6CE26B03E5E00B11485 /* MovieDetailsRouter.swift in Sources */,
 				1E3BAE6126AF534A00AD8E45 /* MoviesListInteractor.swift in Sources */,
 				1E3BAE6E26AF95E000AD8E45 /* MovieDetailsRepo.swift in Sources */,
 				1E3913A326AE29DA006ED543 /* ViewController.swift in Sources */,
@@ -560,12 +585,15 @@
 				1E3BAE6526AF647800AD8E45 /* MovieTableViewCell.swift in Sources */,
 				1E3913D826AE2E65006ED543 /* MoviesListResource.swift in Sources */,
 				1E3BAE5B26AF2BC900AD8E45 /* MoviesListView.swift in Sources */,
+				1E73B6D126B03ED700B11485 /* ViewController+extension.swift in Sources */,
 				1E39139F26AE29DA006ED543 /* AppDelegate.swift in Sources */,
 				1E3913D526AE2B0F006ED543 /* NetworkError.swift in Sources */,
 				1E3BAE5F26AF518D00AD8E45 /* MoviesListPresenter.swift in Sources */,
 				1E3BAE5D26AF3D4200AD8E45 /* MoviesListProtocols.swift in Sources */,
 				1E3BAE7226AF9A4E00AD8E45 /* MovieDetailsResource.swift in Sources */,
+				1E44C36426AFFC31001FA5F3 /* MovieDetailsProtocols.swift in Sources */,
 				1E3BAE6926AF7C1900AD8E45 /* StoryBoardsIDs.swift in Sources */,
+				1E44C36226AFFBF1001FA5F3 /* MovieDetailsPresenter.swift in Sources */,
 				1E3913A126AE29DA006ED543 /* SceneDelegate.swift in Sources */,
 				1E3913D326AE2AEB006ED543 /* ResourceManager.swift in Sources */,
 				1E3913DD26AE3373006ED543 /* MoviesList.swift in Sources */,

@@ -22,6 +22,7 @@ protocol MoviesListPresenterProtocol {
     var moviesCount:Int {get}
     func getMoviesList()
     func configureCell(_ cell: MovieCellProtocol,at index: Int)
+    func openMovieDetails(at index: Int)
 }
 
 protocol MoviesListPresenterOutputProtocol: UIViewController {
@@ -35,4 +36,5 @@ protocol MovieCellProtocol: AnyObject {
 protocol MoviesListRouterProtocol {
     var rootViewController: UIViewController { get }
     func showAlert(message: String, view: UIViewController)
+    func pushMovieDetails(interactor: MovieDetailsInteractorProtocol, vc: UIViewController)
 }

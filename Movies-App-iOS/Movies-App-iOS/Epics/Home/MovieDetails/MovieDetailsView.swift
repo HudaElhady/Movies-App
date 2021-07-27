@@ -5,4 +5,34 @@
 //  Created by huda elhady on 27/07/2021.
 //
 
-import Foundation
+import UIKit
+
+class MovieDetailsView: UIViewController {
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var taglineLabel: UILabel!
+    
+   var presenter: MovieDetailsPresenterProtocol? {
+        didSet {
+            presenter?.view = self
+        }
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.getMovieDetails()
+    }
+}
+
+extension MovieDetailsView: MovieDetailsPresenterOutputProtocol {
+    func updateDetails(_ presenter: MovieDetailsPresenterProtocol) {
+        movieImageView.kf.setImage(with: URL(string: presenter.movieImageUrl)!)
+        movieTitleLabel.text = presenter.movieTitle
+        overviewLabel.text = presenter.overview
+        releaseDateLabel.text = presenter.releaseDate
+        taglineLabel.text = presenter.tagline
+    }
+}

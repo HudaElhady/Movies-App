@@ -33,7 +33,13 @@ extension MoviesListPresenter: MoviesListPresenterProtocol {
     
     func configureCell(_ cell: MovieCellProtocol,at index: Int) {
         let movie = moviesList[index]
-        cell.setMovie(title: movie.title ?? "", image: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")" )
+        cell.setMovie(title: movie.title ?? "", image: NetworkConstants.imageBaseUrl + (movie.posterPath ?? "") )
+    }
+    
+    func openMovieDetails(at index: Int) {
+        guard let view = view else { return }
+        let interactor = MovieDetailsInteractor(movieId: moviesList[index].id ?? 0)
+        router.pushMovieDetails(interactor: interactor, vc: view)
     }
 }
 

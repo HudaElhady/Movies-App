@@ -17,6 +17,7 @@ enum StoryBoardsIDs: String {
 
 enum ViewControllersIDs: String {
     case MoviesListVC = "MoviesListView"
+    case MovieDetailsVC = "MovieDetailsView"
     
     var id: String {
         return self.rawValue

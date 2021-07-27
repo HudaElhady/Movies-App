@@ -11,7 +11,7 @@ struct MovieDetails : Codable {
 
     let adult : Bool?
     let backdropPath : String?
-    let belongsToCollection : String?
+//    let belongsToCollection : String?
     let budget : Int?
     let homepage : String?
     let id : Int?
@@ -34,7 +34,7 @@ struct MovieDetails : Codable {
     enum CodingKeys: String, CodingKey {
         case adult, budget, homepage, id, overview, popularity, revenue, runtime, tagline, title, status, video
         case backdropPath = "backdrop_path"
-        case belongsToCollection = "belongs_to_collection"
+//        case belongsToCollection = "belongs_to_collection"
         case imdbId = "imdb_id"
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
