@@ -30,7 +30,7 @@ extension HttpMethod {
         }
     }
 }
-
+//TODO: Use Alamofire
 extension URLSession {
     func load<A>(_ resource: Resource<A>, completion: @escaping (Result<A, NetworkError>) -> Void) {
         dataTask(with: resource.urlRequest) { data, response, error in
